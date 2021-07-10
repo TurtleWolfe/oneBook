@@ -46,17 +46,19 @@ Merge with Expo:
 ### [StoryBook ReactNative 6.2:](https://github.com/storybookjs/react-native 'React Native StoryBook 6.2')
 
 ```bash
-rm -rf oneBook
+# ssh-keygen -t rsa -b 4096 -C "dev.TurtleWolfe@gmail.com"
+# xclip -sel clip < ~/.ssh/id_rsa.pub
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_rsa
+
+# rm -rf oneBook
 expo init oneBook --npm
 cd oneBook
 git status
-git remote add origin https://github.com/TurtleWolfe/oneBook.git
-ssh-keygen -t rsa -b 4096 -C "dev.TurtleWolfe@gmail.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-xclip -sel clip < ~/.ssh/id_rsa.pub
+# git remote add origin https://github.com/TurtleWolfe/oneBook.git
 # git push --set-upstream origin main
-git push git@github.com:TurtleWolfe/oneBook.git
+# git push git@github.com:TurtleWolfe/oneBook.git
+git push --set-upstream git@github.com:TurtleWolfe/oneBook.git main
 git status
 expo start
 npx -p @storybook/cli sb init --type react_native

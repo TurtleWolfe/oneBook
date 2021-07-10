@@ -54,10 +54,7 @@ Merge with Expo:
 # rm -rf oneBook
 expo init oneBook --npm
 cd oneBook
-git status
-# git remote add origin https://github.com/TurtleWolfe/oneBook.git
-# git push --set-upstream origin main
-# git push git@github.com:TurtleWolfe/oneBook.git
+cp ~/Desktop/epsilon/README ~/Desktop/oneBook
 git push --set-upstream git@github.com:TurtleWolfe/oneBook.git main
 git status
 expo start
